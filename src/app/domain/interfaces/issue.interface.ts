@@ -1,12 +1,9 @@
-import { IssueTypeEnum } from "@domain/enums/issueType.enum";
-import { PriorityEnum } from "@domain/enums/priority.enum";
-
 
 export interface IssueInterface {
   issueNo:number;
-  titile:string;
+  title:string;
   description:string;
-  priority:PriorityEnum,
-  type:IssueTypeEnum,
+  priority:'Low'|'High',
+  type:'Feature'|'Bug'|'Documentation',
   completed?:Date;
 }
