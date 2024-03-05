@@ -10,6 +10,9 @@ import { IssueListComponent } from './issue-list/issue-list.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    IssueListComponent
   ]
 })
 export class IssueModule { }
