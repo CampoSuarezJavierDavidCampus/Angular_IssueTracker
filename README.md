@@ -1,5 +1,5 @@
 # IssueTracker
-
+This project allows me to create an application that allows reporting errors and filtering them in a table
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.2.
 
 ## Development server
