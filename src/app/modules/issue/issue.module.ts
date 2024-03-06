@@ -1,23 +1,24 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {  NgModule } from '@angular/core';
 import { IssueListComponent } from './issue-list/issue-list.component';
+import { IssueReportComponent } from './issue-report/issue-report.component';
 //*ClarityModule
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    IssueListComponent
+    IssueListComponent,
+    IssueReportComponent
   ],
   imports: [
-    CommonModule,
     //*ClarityModules
     ClarityModule,
     BrowserAnimationsModule,
     //*Reactive Forms
     ReactiveFormsModule
+
   ],
   exports:[
     IssueListComponent
