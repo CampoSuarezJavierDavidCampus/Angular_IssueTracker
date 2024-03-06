@@ -5,12 +5,14 @@ import { IssueReportComponent } from './issue-report/issue-report.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 
 
 @NgModule({
   declarations: [
     IssueListComponent,
-    IssueReportComponent
+    IssueReportComponent,
+    ModalDialogComponent
   ],
   imports: [
     //*ClarityModules
