@@ -38,8 +38,15 @@ export class IssuesService {
       type:'Documentation',
     }
   ];
+
   constructor() { }
+
   get pendingIssues():IssueInterface[]{
     return this.issues.filter(issue => !issue.completed);
+  }
+
+  set createIssue(issue:IssueInterface){
+    issue.issueNo=this.issues.length +1;
+    this.issues.push(issue)
   }
 }

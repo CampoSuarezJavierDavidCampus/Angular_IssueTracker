@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { IssueInterface } from '@domain/interfaces/issue.interface';
 import { IssueFormInterface } from '@domain/interfaces/issueForm.interface';
+import { IssuesService } from '@services/issues.service';
 
 @Component({
   selector: 'app-issue-report',
@@ -14,4 +16,16 @@ export class IssueReportComponent {
     priority:new FormControl('',{nonNullable:true}),
     type:new FormControl('',{nonNullable:true})
   })
+
+  constructor(private issueService:IssuesService) {}
+
+  addIssue():void{
+    let issue =this.issueForm.getRawValue() as IssueInterface;
+    this.createIssue(issue)
+
+  }
+
+  createIssue(issue:IssueInterface):void{
+    this.issueService.createIssue = issue;
+  }
 }
