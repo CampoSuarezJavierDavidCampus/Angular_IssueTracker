@@ -4,6 +4,7 @@ import { IssueListComponent } from './issue-list/issue-list.component';
 //*ClarityModule
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,6 +16,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     //*ClarityModules
     ClarityModule,
     BrowserAnimationsModule,
+    //*Reactive Forms
+    ReactiveFormsModule
   ],
   exports:[
     IssueListComponent
