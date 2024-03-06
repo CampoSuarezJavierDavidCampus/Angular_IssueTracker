@@ -8,12 +8,30 @@ import { IssuesService } from '@services/issues.service';
   styleUrls: ['./issue-list.component.css']
 })
 export class IssueListComponent implements OnInit {
-  issues:IssueInterface[] = [];
+  private _issues:IssueInterface[] = [];
+  showReportIssue=false;
 
   constructor(private issueService:IssuesService) {}
 
   ngOnInit(): void {
-    this.issues = this.pendingIssues
+    this.loadIssues();
+  }
+
+  CloseReport(){
+    this.showReportIssue=false;
+    this.loadIssues();
+  }
+
+  private loadIssues():IssueInterface[]{
+    this.Issues = this.pendingIssues;
+    return this._issues;
+  }
+
+  private set Issues(issues:IssueInterface[]){
+    this._issues = issues;
+  }
+  get Issues():IssueInterface[]{
+    return this._issues;
   }
 
   private get pendingIssues():IssueInterface[]{

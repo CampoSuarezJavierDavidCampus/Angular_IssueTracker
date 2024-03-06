@@ -31,7 +31,14 @@
     </select>
   </clr-select-container>
 
-  <button class="btn btn-primary " type="submit">Create</button>
+  <button class="btn btn-primary d-flex align-content-center justify-content-center " type="submit">
+    <span>Create</span>
+    <i class="bi bi-safe-fill" style="font-size: 2em; color: #007bff;"></i>
+  </button>
+  <button class="btn btn-warning d-flex align-content-center justify-content-center " type="button" (click)="formClose.emit()">
+    <span>Cancel</span>
+    <i class="bi bi-x-circle-fill" style="font-size: 2em; color: #007bff;"></i>
+  </button>
 </form>
 
 
