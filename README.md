@@ -6,7 +6,7 @@ This project allows me to create an application that allows reporting errors and
 ![Create Issues](https://github.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img2.png?raw=true")
 ### validate issues
 ![validate Issues](https://github.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img3.png?raw=true")
-### Search Matcher
+### Search Matches
 ![similar Issues](https://github.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img4.png?raw=true")
 ### Mark a complete issue
 ![complete an Issue](https://github.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img5.png?raw=true")
