@@ -8,6 +8,7 @@ import { IssuesService } from '@services/issues.service';
   styleUrls: ['./issue-list.component.css']
 })
 export class IssueListComponent implements OnInit {
+  SelectedIssue:IssueInterface | null = null;
   private _issues:IssueInterface[] = [];
   showReportIssue=false;
 
@@ -20,6 +21,13 @@ export class IssueListComponent implements OnInit {
   CloseReport(){
     this.showReportIssue=false;
     this.loadIssues();
+  }
+  confirm(comfirmed:boolean){
+    if(comfirmed && this.SelectedIssue){
+      this.issueService.completeIssue =this.SelectedIssue;
+      this.loadIssues();
+    }
+    this.SelectedIssue=null;
   }
 
   private loadIssues():IssueInterface[]{

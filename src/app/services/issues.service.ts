@@ -45,6 +45,20 @@ export class IssuesService {
     return this.issues.filter(issue => !issue.completed);
   }
 
+  getSuggestions(titile:string):IssueInterface[]{
+    if(titile.length < 3)return [];
+    return this.issues.filter(issue => issue.title.toLocaleLowerCase().includes(titile.toLocaleLowerCase()));
+  }
+
+  set completeIssue(issue:IssueInterface){
+    let selectedIssue:IssueInterface = {
+      ...issue,
+      completed: new Date()
+    }
+    const index = this.issues.findIndex(iss => iss===issue)
+    this.issues[index] = selectedIssue;
+  }
+
   set createIssue(issue:IssueInterface){
     issue.issueNo=this.issues.length +1;
     this.issues.push(issue)
