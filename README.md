@@ -1,12 +1,12 @@
 # IssueTracker
 This project allows me to create an application that allows reporting errors and filtering them in a table
 
-![List Issues]("https://github.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img1.png")
-![Create Issues]("https://github.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img2.png")
-![validate Issues]("https://github.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img3.png")
-![similar Issues]("https://github.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img4.png")
-![complete an Issue]("https://github.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img5.png")
-![complete an Issue]("https://github.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img6.png")
+![List Issues](https://raw.githubusercontent.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img1.png")
+![Create Issues](https://raw.githubusercontent.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img2.png")
+![validate Issues](https://raw.githubusercontent.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img3.png")
+![similar Issues](https://raw.githubusercontent.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img4.png")
+![complete an Issue](https://raw.githubusercontent.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img5.png")
+![complete an Issue](https://raw.githubusercontent.com/CampoSuarezJavierDavidCampus/Angular_IssueTracker/blob/master/images/img6.png")
 
 
 
