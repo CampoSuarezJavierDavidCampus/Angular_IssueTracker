@@ -55,18 +55,24 @@ export class IssueReportComponent implements OnInit{
     this.issueService.createIssue = issue;
   }
 
-  searchMarker(titile:string){
-    let inner = (" " + titile).split(" ");
+  searchMarker(title:string){
+    let titleWords = title.split(" ").filter(tw => tw.length>0);
+    let markedWords:string[] = [];
+    let searchWords = (this.$currentSearch as string).split(" ");
+    let taq = 'mark';
 
+    searchWords.forEach(sw => {
+      titleWords.forEach(tw => {
+        if(sw.length>=1 && markedWords.indexOf(tw) === -1 && tw.toLocaleLowerCase().startsWith(sw)){
+          markedWords.push(tw);
+        }
+      });
+    })
+    markedWords.forEach(mw =>{
+      let i = titleWords.indexOf(mw);
+      titleWords[i] = `<${taq}>${mw}</${taq}>`
+    })
+    return titleWords.join(" ");
 
-
-    return inner.reduce((prev,current)=>{
-      console.log(current.toLowerCase().includes('add'));
-      if (this.$currentSearch && current.toLowerCase().includes(this.$currentSearch as string)) {
-        current = `<mark>${current}</mark>`
-      }
-
-      return prev + " " + current;
-    }) ;
   }
 }

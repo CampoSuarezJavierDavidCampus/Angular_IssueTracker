@@ -45,9 +45,29 @@ export class IssuesService {
     return this.issues.filter(issue => !issue.completed);
   }
 
-  getSuggestions(titile:string):IssueInterface[]{
-    if(titile.length < 3)return [];
-    return this.issues.filter(issue => issue.title.toLocaleLowerCase().includes(titile.toLocaleLowerCase()));
+  getSuggestions(title:string):IssueInterface[]{
+    if(title.length < 3)return [];
+
+    let titleWords = title.toLocaleLowerCase().split(" ");
+
+    return this.issues.filter(iss => {
+      let issueWords = iss.title.toLocaleLowerCase().split(" ");
+
+      let included:boolean = false;
+      titleWords.forEach(tw => {
+        if(tw.length<=1) return;
+        for (let i = 0; i < issueWords.length; i++) {
+          const iw = issueWords[i];
+          if(iw.length<1 || tw.length<1)continue;
+          if(iw.startsWith(tw)){
+            included = true;
+            return;
+          }
+        }
+      });
+      return included;
+    });
+
   }
 
   set completeIssue(issue:IssueInterface){
